@@ -1,0 +1,47 @@
+:root {
+    /* Light theme (default) */
+    --bg-primary: #ffffff;
+    --bg-secondary: #f8f9fa;
+    --text-primary: #212529;
+    --text-secondary: #6c757d;
+    --border-color: rgba(0,0,0,.125);
+    
+    /* Colors */
+    --primary: #0056b3;
+    --secondary: #5a6268;
+    --success: #1e7e34;
+    --danger: #c82333;
+    --light: #f8f9fa;
+    --dark: #212529;
+    
+    /* Layout */
+    --spacing: 1rem;
+    --border-radius: 4px;
+    --min-tap-target: 44px;
+    --focus-ring: 0 0 0 3px rgba(0, 86, 179, 0.5);
+
+    /* Grid */
+    --grid-alt-bg: #eee;
+    --grid-alt-bg-2: #ddd;
+
+    /* Forms */
+    --input-group-addon-bg: #e9ecef;
+    --form-check-size: 1rem;
+    --switch-width: 2.5rem;
+    --switch-height: 1.5rem;
+    --select-chevron-light: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%236c757d' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+    --select-chevron-dark: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23f8f9fa' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+
+    /* RGB values for opacity support */
+    --bg-primary-rgb: 255, 255, 255;
+    --bg-secondary-rgb: 248, 249, 250;
+
+    /* Navbar */
+    --navbar-height: 4rem;
+
+    /* Typography */
+    --font-family-base: 'Roboto', system-ui, -apple-system, sans-serif;
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-bold: 700;
+}

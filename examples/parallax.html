@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yocto CSS - Parallax Demo</title>
+    
+    <!-- Preload Fonts -->
+    <link rel="preload" href="../fonts/roboto/Roboto-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../fonts/roboto/Roboto-Medium.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../fonts/roboto/Roboto-Bold.woff2" as="font" type="font/woff2" crossorigin>
+    
+    <link rel="stylesheet" href="../css/yocto.css">
+    <script src="../js/theme.js" defer></script>
+    <style>
+        * {
+            font-family: 'Roboto', sans-serif !important;
+        }
+        
+        .content-section {
+            padding: 4rem 0;
+        }
+
+        .parallax-quote {
+            font-size: 1.5rem;
+            font-style: italic;
+            text-align: center;
+        }
+
+        /* Ensure theme toggle is visible over parallax */
+        .theme-toggle {
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+        }
+
+        /* Ensure content flows under sticky navbar */
+        .parallax {
+            margin-top: calc(-1 * var(--navbar-height));
+            padding-top: var(--navbar-height);
+        }
+    </style>
+</head>
+<body>
+    <!-- Add Navbar -->
+    <nav class="navbar">
+        <div class="container navbar-container">
+            <a href="#" class="navbar-brand">Yocto CSS</a>
+            
+            <button class="navbar-toggle" aria-label="Toggle navigation">
+                <span class="navbar-toggle-icon"></span>
+            </button>
+
+            <div class="navbar-menu">
+                <a href="#" class="navbar-link active">Home</a>
+                <a href="#features" class="navbar-link">Features</a>
+                <a href="#contact" class="navbar-link">Contact</a>
+                <a href="#about" class="navbar-link">About</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section parallax" style="background-image: url('images/1.png');">
+        <div class="container">
+            <div class="parallax-content">
+                <h1>Welcome to my world</h1>
+                <p class="mb-1">I'm Maxwell Pierce, an AI Audio/Video artist crafting immersive stories that blur the line between the real and the surreal. I weave mystique, futuristic aesthetics, and technology into visuals and soundscapes that evoke emotion and curiosity.</p>
+                <!-- <button class="btn btn-primary">Scroll to discover my work</button> -->
+            </div>
+        </div>
+        <div class="scroll-indicator" aria-hidden="true">
+            <span class="scroll-text">Scroll to discover my work</span>
+            <svg class="chevron-down" viewBox="0 0 24 24">
+                <path d="M4 9l8 8 8-8"></path>
+            </svg>
+        </div>
+    </header>
+
+    <!-- Content Section -->
+    <section class="content-section">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="card">
+                        <div class="card-body">
+                            <h2>Welcome to Parallax Demo</h2>
+                            <p>This page demonstrates how to create engaging parallax scrolling effects using Yocto CSS Framework. 
+                               Scroll down to experience the magic of parallax scrolling.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- After first content section -->
+    <section class="content-section bg-alt video-section">
+        <div class="container">
+            <div class="video-card">
+                <!-- Video carousel will be rendered here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- First Parallax Quote -->
+    <section class="parallax" style="background-image: url('./images/2.png');">
+        <div class="container">
+            <div class="parallax-content">
+                <p class="parallax-quote">"Design is not just what it looks like and feels like. Design is how it works."</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="content-section" id="features">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="card mb-1">
+                        <div class="card-body">
+                            <h3>Smooth Scrolling</h3>
+                            <p>Experience butter-smooth parallax effects as you scroll through the page.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card mb-1">
+                        <div class="card-body">
+                            <h3>Responsive Design</h3>
+                            <p>Perfectly adapts to any screen size while maintaining the parallax effect.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card mb-1">
+                        <div class="card-body">
+                            <h3>Dark Mode</h3>
+                            <p>Supports both light and dark themes with seamless transitions.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Second Parallax Quote -->
+    <section class="parallax" style="background-image: url('images/3.png');">
+        <div class="container">
+            <div class="parallax-content">
+                <p class="parallax-quote">"Simplicity is the ultimate sophistication."</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="content-section" id="contact">
+        <div class="container">
+            <div class="card">
+                <div class="card-body">
+                    <h2>Get in Touch</h2>
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" class="form-control" placeholder="Your name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" class="form-control" placeholder="Your email">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final Parallax Section -->
+    <section class="parallax" style="background-image: url('images/4.png');">
+        <div class="container">
+            <div class="parallax-content text-center">
+                <h2>Start Building Today</h2>
+                <p class="mb-1">Create stunning websites with Yocto CSS Framework</p>
+                <button class="btn btn-primary">Download Yocto CSS</button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="content-section text-center">
+        <div class="container">
+            <p>Made with Yocto CSS Framework</p>
+        </div>
+    </footer>
+
+    <!-- Add navbar.js before closing body tag -->
+    <script src="../js/navbar.js"></script>
+    <script src="../js/video.js"></script>
+</body>
+</html>

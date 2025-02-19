@@ -1,0 +1,3 @@
+.mt-1 { margin-top: var(--spacing); }
+.mb-1 { margin-bottom: var(--spacing); }
+.p-1 { padding: var(--spacing); }

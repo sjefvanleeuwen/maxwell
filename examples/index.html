@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yocto CSS Framework Demo</title>
+    <link rel="stylesheet" href="../css/yocto.css">
+    <script src="../js/theme.js" defer></script>
+</head>
+<body>
+    <a href="#main-content" class="skip-nav">Skip to main content</a>
+    <nav class="navbar">
+        <div class="container navbar-container">
+            <a href="#" class="navbar-brand">Yocto CSS</a>
+            
+            <button class="navbar-toggle" aria-label="Toggle navigation">
+                <span class="navbar-toggle-icon"></span>
+            </button>
+    
+            <div class="navbar-menu">
+                <a href="#" class="navbar-link active">Home</a>
+                <a href="#" class="navbar-link">Features</a>
+                <a href="#" class="navbar-link">Documentation</a>
+                <a href="#" class="navbar-link">About</a>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Add navbar.js before closing body tag -->
+    <script src="../js/navbar.js"></script>
+    <div class="container">
+        <header role="banner">
+            <h1 class="mb-1">Yocto CSS Framework Demo</h1>
+        </header>
+
+        <nav role="navigation" aria-label="Main navigation">
+            <!-- Add navigation if needed -->
+        </nav>
+
+        <main id="main-content" role="main">
+            <!-- Grid System -->
+            <section class="mb-1" aria-labelledby="grid-title">
+                <h2 id="grid-title">Grid System</h2>
+                <div class="row">
+                    <div class="col" style="background: var(--grid-alt-bg); padding: 1rem;">Column 1</div>
+                    <div class="col" style="background: var(--grid-alt-bg-2); padding: 1rem;">Column 2</div>
+                    <div class="col" style="background: var(--grid-alt-bg); padding: 1rem;">Column 3</div>
+                </div>
+            </section>
+
+            <!-- Buttons -->
+            <section class="mb-1" aria-labelledby="buttons-title">
+                <h2 id="buttons-title">Buttons</h2>
+                <button class="btn btn-primary" aria-label="Primary action">Primary Button</button>
+                <button class="btn btn-secondary" aria-label="Secondary action">Secondary Button</button>
+            </section>
+
+            <!-- Form -->
+            <section class="mb-1" aria-labelledby="form-title">
+                <h2 id="form-title">Form Elements</h2>
+                <form>
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input id="name" type="text" class="form-control" placeholder="Enter your name" aria-required="true">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input id="email" type="email" class="form-control" placeholder="Enter your email" aria-required="true">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </section>
+
+            <!-- New Form Components -->
+            <section class="mb-1" aria-labelledby="form-title">
+                <h2 id="form-title">Form Elements</h2>
+                <form>
+                    <!-- Input Group -->
+                    <div class="form-group">
+                        <label>Username</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">@</div>
+                            <input type="text" class="form-control" placeholder="Username">
+                        </div>
+                    </div>
+
+                    <!-- Custom Select -->
+                    <div class="form-group">
+                        <label for="country">Country</label>
+                        <select id="country" class="form-select">
+                            <option>Choose...</option>
+                            <option>United States</option>
+                            <option>Canada</option>
+                            <option>Mexico</option>
+                        </select>
+                    </div>
+
+                    <!-- Checkbox -->
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="terms">
+                        <label class="form-check-label" for="terms">I agree to the terms</label>
+                    </div>
+
+                    <!-- Switch -->
+                    <div class="form-group">
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="switch-slider"></span>
+                        </label>
+                        <label class="ms-2">Notifications</label>
+                    </div>
+
+                    <!-- Validation Example -->
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control is-valid" id="email">
+                        <div class="valid-feedback">Looks good!</div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </section>
+
+            <!-- Cards -->
+            <section class="mb-1" aria-labelledby="cards-title">
+                <h2 id="cards-title">Cards</h2>
+                <div class="row">
+                    <div class="col">
+                        <article class="card" role="article">
+                            <div class="card-body">
+                                <h3>Card Title</h3>
+                                <p>This is a simple card example using Yocto CSS Framework.</p>
+                                <button class="btn btn-primary">Read More</button>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col">
+                        <article class="card" role="article">
+                            <div class="card-body">
+                                <h3>Another Card</h3>
+                                <p>Cards are great for organizing content into digestible sections.</p>
+                                <button class="btn btn-secondary">Learn More</button>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Utility Classes -->
+            <section>
+                <h2>Utility Classes</h2>
+                <div class="text-center p-1" style="background: var(--grid-alt-bg);">
+                    Centered Text with Padding
+                </div>
+                <div class="text-right mt-1" style="background: var(--grid-alt-bg-2);">
+                    Right-aligned Text with Margin Top
+                </div>
+            </section>
+        </main>
+
+        <footer role="contentinfo">
+            <!-- Add footer if needed -->
+        </footer>
+    </div>
+</body>
+</html>

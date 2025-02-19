@@ -1,0 +1,110 @@
+.hero-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-top: calc(var(--navbar-height) + 2rem);
+    position: relative;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('../examples/images/1.png');
+}
+
+.hero-section .parallax-content {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: rgba(var(--bg-primary-rgb), 0.75);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+.hero-section h1 {
+    font-size: 4rem;
+    font-weight: var(--font-weight-bold);
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
+}
+
+.hero-section p {
+    font-size: 1.5rem;
+    font-weight: var(--font-weight-medium);
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+.hero-section .btn {
+    font-size: 1.25rem;
+    padding: 1rem 2rem;
+    font-weight: var(--font-weight-medium);
+}
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--text-primary);
+    animation: pulse 2s infinite;
+    opacity: 0.8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    pointer-events: none; /* Make it non-interactive */
+}
+
+.scroll-text {
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: var(--font-weight-medium);
+    color: var(--text-primary);
+    opacity: 0.9;
+    text-align: center;
+}
+
+.chevron-down {
+    width: 40px;
+    height: 40px;
+    stroke-width: 2px;
+    fill: none;
+    stroke: currentColor;
+}
+
+@keyframes pulse {
+    0% {
+        transform: translateX(-50%) translateY(0);
+        opacity: 0.8;
+    }
+    50% {
+        transform: translateX(-50%) translateY(10px);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(-50%) translateY(0);
+        opacity: 0.8;
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 3rem;
+    }
+    
+    .hero-section p {
+        font-size: 1.25rem;
+    }
+
+    .scroll-indicator {
+        bottom: 1rem;
+    }
+}
+
+/* Fix for mobile devices that don't support fixed background */
+@media (max-width: 768px), (hover: none) {
+    .hero-section {
+        background-attachment: scroll;
+    }
+}

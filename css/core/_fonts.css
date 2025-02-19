@@ -1,0 +1,40 @@
+@font-face {
+    font-family: 'Roboto';
+    src: local('Roboto Regular'),
+         url('../../fonts/roboto/Roboto-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: local('Roboto Medium'),
+         url('../../fonts/roboto/Roboto-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: local('Roboto Bold'),
+         url('../../fonts/roboto/Roboto-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Debug - Remove after confirming fonts load */
+body::after {
+    content: 'Roboto loaded';
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    background: #000;
+    color: #fff;
+    padding: 5px;
+    font-size: 12px;
+    z-index: 9999;
+    font-family: 'Roboto';
+}

@@ -1,0 +1,23 @@
+[data-theme="dark"] {
+    --bg-primary: #212529;
+    --bg-secondary: #343a40;
+    --text-primary: #f8f9fa;
+    --text-secondary: #ced4da;
+    --border-color: rgba(255,255,255,.125);
+    --input-group-addon-bg: #2a2f34;
+    --grid-alt-bg: #2a2f34;
+    --grid-alt-bg-2: #1a1d20;
+    
+    --primary: #5b9dd9;
+    --secondary: #6c757d;
+    --success: #4caf50;
+    --danger: #f44336;
+
+    /* RGB values for opacity */
+    --bg-primary-rgb: 33, 37, 41;
+    --bg-secondary-rgb: 52, 58, 64;
+
+    .form-select {
+        background-image: var(--select-chevron-dark);
+    }
+}

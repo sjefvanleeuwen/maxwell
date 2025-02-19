@@ -1,0 +1,27 @@
+.btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: var(--border-radius);
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    min-height: var(--min-tap-target);
+    min-width: var(--min-tap-target);
+    position: relative;
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    color: white;
+}
+
+.btn-secondary {
+    background-color: var(--secondary);
+    color: white;
+}
+
+.btn:focus-visible {
+    box-shadow: var(--focus-ring);
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+}

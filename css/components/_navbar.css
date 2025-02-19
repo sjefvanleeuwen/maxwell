@@ -1,0 +1,115 @@
+.navbar {
+    background-color: rgba(var(--bg-primary-rgb), 0.9);
+    border-bottom: 1px solid var(--border-color);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    height: var(--navbar-height);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+.navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar-brand {
+    font-size: 1.25rem;
+    font-weight: var(--font-weight-medium);
+    color: var(--text-primary);
+    text-decoration: none;
+}
+
+.navbar-toggle {
+    display: none;
+    border: none;
+    background: none;
+    padding: 0.5rem;
+    color: var(--text-primary);
+    cursor: pointer;
+}
+
+.navbar-menu {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.navbar-link {
+    color: var(--text-secondary);
+    text-decoration: none;
+    padding: 0.5rem;
+    transition: color 0.2s;
+}
+
+.navbar-link:hover,
+.navbar-link.active {
+    color: var(--primary);
+}
+
+/* Hamburger Icon */
+.navbar-toggle-icon {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: var(--text-primary);
+    position: relative;
+    transition: background-color 0.2s;
+}
+
+.navbar-toggle-icon::before,
+.navbar-toggle-icon::after {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 2px;
+    background-color: var(--text-primary);
+    transition: transform 0.2s;
+}
+
+.navbar-toggle-icon::before {
+    top: -6px;
+}
+
+.navbar-toggle-icon::after {
+    bottom: -6px;
+}
+
+/* Mobile Menu Styles */
+@media (max-width: 768px) {
+    .navbar-toggle {
+        display: block;
+    }
+
+    .navbar-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        background-color: var(--bg-primary);
+        border-bottom: 1px solid var(--border-color);
+        padding: 1rem 0;
+    }
+
+    .navbar-menu.active {
+        display: flex;
+    }
+
+    /* Animate hamburger to X */
+    .navbar-toggle.active .navbar-toggle-icon {
+        background-color: transparent;
+    }
+
+    .navbar-toggle.active .navbar-toggle-icon::before {
+        transform: rotate(45deg) translate(4px, 4px);
+    }
+
+    .navbar-toggle.active .navbar-toggle-icon::after {
+        transform: rotate(-45deg) translate(4px, -4px);
+    }
+}

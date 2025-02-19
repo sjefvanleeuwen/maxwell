@@ -1,0 +1,44 @@
+.parallax {
+    position: relative;
+    min-height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Content overlay with glass effect */
+.parallax-content {
+    position: relative;
+    padding: calc(var(--spacing) * 2);
+    background-color: rgba(var(--bg-primary-rgb), 0.85);
+    color: var(--text-primary);
+    border-radius: var(--border-radius);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: var(--spacing);
+}
+
+/* Fix for mobile devices that don't support fixed background */
+@media (max-width: 768px), (hover: none) {
+    .parallax {
+        background-attachment: scroll;
+    }
+}
+
+/* Enhance readability in dark mode */
+[data-theme="dark"] .parallax-content {
+    background-color: rgba(var(--bg-primary-rgb), 0.9);
+}
+
+/* Smooth transition for theme switching */
+.parallax-content {
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Optional loading state */
+.parallax.loading {
+    background-image: none !important;
+    background-color: var(--bg-secondary);
+}
