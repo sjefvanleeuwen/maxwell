@@ -9,6 +9,7 @@
     <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+    <script type="module" src="../components/navbar/navbar.js"></script>
     <style>
         .article-hero {
             height: 60vh;
@@ -138,16 +139,8 @@
     </style>
 </head>
 <body>
-    <nav class="navbar">
-        <div class="container navbar-container">
-            <a href="#" class="navbar-brand">Yocto CSS</a>
-            <div class="navbar-menu">
-                <a href="index.html" class="navbar-link">Home</a>
-                <a href="parallax.html" class="navbar-link">Demo</a>
-                <a href="#" class="navbar-link active">Blog</a>
-            </div>
-        </div>
-    </nav>
+    <a href="#main-content" class="skip-nav">Skip to main content</a>
+    <top-navbar></top-navbar>
 
     <header class="article-hero"></header>
 

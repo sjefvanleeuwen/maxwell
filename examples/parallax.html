@@ -12,6 +12,8 @@
     
     <link rel="stylesheet" href="../css/yocto.css">
     <link rel="stylesheet" href="../css/components/card.css">
+    <script type="module" src="../components/navbar/navbar.js"></script>
+    <script src="../js/theme.js" defer></script>
     <style>
         
         .content-section {
@@ -38,23 +40,9 @@
     </style>
 </head>
 <body>
-    <!-- Add Navbar -->
-    <nav class="navbar">
-        <div class="container navbar-container">
-            <a href="#" class="navbar-brand">Yocto CSS</a>
-            
-            <button class="navbar-toggle" aria-label="Toggle navigation">
-                <span class="navbar-toggle-icon"></span>
-            </button>
-
-            <div class="navbar-menu">
-                <a href="#" class="navbar-link active">Home</a>
-                <a href="#features" class="navbar-link">Features</a>
-                <a href="#contact" class="navbar-link">Contact</a>
-                <a href="#about" class="navbar-link">About</a>
-            </div>
-        </div>
-    </nav>
+    <a href="#main-content" class="skip-nav">Skip to main content</a>
+    <!-- Use custom navbar component -->
+    <top-navbar></top-navbar>
 
     <!-- Hero Section -->
     <header class="hero-section parallax" style="background-image: url('images/1.png');">
