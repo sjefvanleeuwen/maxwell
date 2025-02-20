@@ -1,0 +1,7 @@
+:root {
+    --surface-rgb: 255, 255, 255;  /* Light theme */
+}
+
+[data-theme="dark"] {
+    --surface-rgb: 30, 32, 35;  /* Dark theme - match your surface color */
+}
