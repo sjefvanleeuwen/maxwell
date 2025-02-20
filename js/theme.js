@@ -1,5 +1,10 @@
 class ThemeManager {
     constructor() {
+        // Set dark mode as default theme
+        if (!localStorage.getItem('theme')) {
+            localStorage.setItem('theme', 'dark');
+            document.documentElement.setAttribute('data-theme', 'dark');
+        }
         this.theme = localStorage.getItem('theme') || 'light';
         this.init();
     }
