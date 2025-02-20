@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="../css/yocto.css">
     <link rel="stylesheet" href="../css/components/card.css">
     <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
     <style>
         .article-hero {
             height: 60vh;
@@ -100,6 +102,39 @@
         .article-content p {
             margin-bottom: 1.5rem;
         }
+
+        /* Code block styling */
+        pre[class*="language-"] {
+            border-radius: var(--radius);
+            margin: 2rem 0;
+            box-shadow: var(--shadow);
+        }
+
+        /* Theme switching for code blocks */
+        [data-theme="light"] pre[class*="language-"] {
+            background: #f5f5f5;
+        }
+
+        [data-theme="dark"] pre[class*="language-"] {
+            background: #1e1e1e;
+        }
+
+        .code-wrapper {
+            position: relative;
+            margin: 2rem 0;
+        }
+
+        .code-label {
+            position: absolute;
+            top: -0.8rem;
+            right: 1rem;
+            background: var(--primary);
+            color: white;
+            padding: 0.2rem 0.8rem;
+            border-radius: var(--radius);
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
     </style>
 </head>
 <body>
@@ -188,6 +223,47 @@
             </div>
 
             <div class="article-section">
+                <h3>Code Examples</h3>
+                <p>Here's an example of how Yocto CSS handles card animations with clean, maintainable code:</p>
+
+                <div class="code-wrapper">
+                    <span class="code-label">CSS</span>
+                    <pre><code class="language-css">.card {
+    transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+    will-change: opacity, transform;
+}
+
+.card--hidden {
+    opacity: 0;
+    transform: translateY(30px);
+    pointer-events: none;
+}
+
+.card--visible {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}</code></pre>
+                </div>
+
+                <p>The JavaScript implementation is equally straightforward:</p>
+
+                <div class="code-wrapper">
+                    <span class="code-label">JavaScript</span>
+                    <pre><code class="language-javascript">const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.remove('card--hidden');
+            entry.target.classList.add('card--visible');
+        }
+    });
+}, {
+    threshold: 0.2
+});</code></pre>
+                </div>
+            </div>
+
+            <div class="article-section">
                 <h3>Beyond Code Generation</h3>
                 <p>What surprised me most was Copilot's ability to maintain consistency across the entire project. It remembered naming conventions, picked up on patterns, and even suggested improvements to existing code. The tool didn't just help with writing code - it helped create a more cohesive and maintainable codebase.</p>
             </div>
@@ -223,5 +299,8 @@
             startOnLoad: true
         });
     </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-css.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
 </body>
 </html>
