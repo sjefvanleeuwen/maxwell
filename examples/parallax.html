@@ -11,7 +11,7 @@
     <link rel="preload" href="../fonts/roboto/Roboto-Bold.woff2" as="font" type="font/woff2" crossorigin>
     
     <link rel="stylesheet" href="../css/yocto.css">
-    <script src="../js/theme.js" defer></script>
+    <link rel="stylesheet" href="../css/components/card.css">
     <style>
         * {
             font-family: 'Roboto', sans-serif !important;
@@ -185,14 +185,36 @@
         </div>
     </section>
 
+    <!-- Update card section to demonstrate animations -->
+    <section class="content-section">
+        <div class="container">
+            <div class="card-grid">
+                <div class="card">
+                    <h3>Parallax Effect 1</h3>
+                    <p>Scroll to see the magic happen</p>
+                </div>
+                <div class="card">
+                    <h3>Parallax Effect 2</h3>
+                    <p>Watch elements animate as you scroll</p>
+                </div>
+                <div class="card">
+                    <h3>Parallax Effect 3</h3>
+                    <p>Smooth transitions everywhere</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <footer class="content-section text-center">
         <div class="container">
             <p>Made with Yocto CSS Framework</p>
         </div>
     </footer>
 
-    <!-- Add navbar.js before closing body tag -->
+    <!-- Update script order before closing body -->
     <script src="../js/navbar.js"></script>
     <script src="../js/video.js"></script>
+    <script src="../js/theme.js"></script>
+    <script src="../js/scroll-animations.js"></script>
 </body>
 </html>
