@@ -1,0 +1,110 @@
+.article-hero {
+    height: 60vh;
+    background-size: cover;
+    background-position: center 40%;
+    position: relative;
+    margin-bottom: -50px;
+}
+
+.article-hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 30%;
+    background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.3));
+}
+
+.article-meta {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+}
+
+.article-content {
+    margin: 0 auto;
+    padding: 2rem 0;
+    line-height: 1.8;
+    font-size: 1.125rem;
+}
+
+.article-section {
+    margin: 2.5rem 0;
+}
+
+.article-header {
+    text-align: center;
+    margin: -100px auto 0;
+    position: relative;
+    background: rgba(var(--surface-rgb), 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 2.5rem;
+    border-radius: var(--radius-lg);
+    box-shadow: 
+        0 4px 30px rgba(0, 0, 0, 0.1),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.article-header h1 {
+    color: #fff;
+    text-shadow: 
+        -1px -1px 0 rgba(0,0,0,0.8),
+        1px -1px 0 rgba(0,0,0,0.8),
+        -1px 1px 0 rgba(0,0,0,0.8),
+        1px 1px 0 rgba(0,0,0,0.8),
+        0 2px 4px rgba(0,0,0,0.3);
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    /* Remove the gradient background and webkit text properties */
+    /* background: linear-gradient(135deg, var(--primary), transparent);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+}
+
+.pullquote {
+    font-size: 2rem;
+    line-height: 1.4;
+    color: var(--primary);
+    margin: 3.5rem 0;
+    padding-left: 2rem;
+    border-left: 4px solid var(--primary);
+    font-weight: 500;
+}
+
+.article-content h2 {
+    font-size: 2.25rem;
+    margin-top: 3rem;
+}
+
+.article-content h3 {
+    font-size: 1.75rem;
+    margin-top: 2.5rem;
+}
+
+.article-content p {
+    margin-bottom: 1.5rem;
+}
+
+.code-wrapper {
+    position: relative;
+    margin: 2rem 0;
+    /* Remove previous styling */
+}
+
+.code-label {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #fff;
+    font-size: 0.85em;
+    background: #0288d1;
+    padding: 0.1em 0.5em;
+    border-radius: 0 0.2em 0 0.2em;
+    text-transform: lowercase;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    line-height: normal;
+    z-index: 1;
+}
