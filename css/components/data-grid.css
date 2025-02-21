@@ -1,0 +1,87 @@
+/* Light theme variables (default) */
+:root {
+    --data-grid-border: var(--border-color, #e0e0e0);
+    --data-grid-header-bg: var(--surface, #f5f5f5);
+    --data-grid-header-text: var(--text-color, #333);
+    --data-grid-row-odd: var(--surface, #ffffff);
+    --data-grid-row-even: var(--surface-alt, #f8f8f8);
+    --data-grid-text: var(--text-color, #333);
+    --data-grid-hover: var(--surface-hover, #f0f0f0);
+    --data-grid-shadow: rgba(0, 0, 0, 0.1);
+}
+
+/* Dark theme variables */
+[data-theme="dark"] {
+    --data-grid-border: var(--border-color, #2c2c2c);
+    --data-grid-header-bg: var(--surface, #1a1a1a);
+    --data-grid-header-text: var(--text-color, #ffffff);
+    --data-grid-row-odd: var(--surface, #242424);
+    --data-grid-row-even: var(--surface-alt, #2a2a2a);
+    --data-grid-text: var(--text-color, #e0e0e0);
+    --data-grid-hover: var(--surface-hover, #505050);
+    --data-grid-shadow: rgba(0, 0, 0, 0.3);
+}
+
+/* Component styles */
+data-grid {
+    display: block;
+    color-scheme: light dark;
+}
+
+data-grid table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: var(--spacing-md, 1rem) 0;
+    background-color: var(--data-grid-row-odd);
+    color: var(--data-grid-text);
+    border: 1px solid var(--data-grid-border);
+    border-radius: var(--radius, 4px);
+    box-shadow: 0 2px 4px var(--data-grid-shadow);
+    overflow: hidden;
+}
+
+data-grid th, 
+data-grid td {
+    padding: var(--spacing-sm, 0.75rem);
+    text-align: left;
+    border: 1px solid var(--data-grid-border);
+    transition: background-color 0.2s ease;
+}
+
+data-grid th {
+    background-color: var(--data-grid-header-bg);
+    color: var(--data-grid-header-text);
+    font-weight: 600;
+    border-bottom: 2px solid var(--data-grid-border);
+}
+
+data-grid tbody tr {
+    background-color: var(--data-grid-row-odd);
+}
+
+data-grid tbody tr:nth-child(even) {
+    background-color: var(--data-grid-row-even);
+}
+
+data-grid tbody tr:hover {
+    background-color: var(--data-grid-hover);
+}
+
+data-grid td img {
+    display: block;
+    object-fit: contain;
+    border-radius: var(--radius-sm, 2px);
+    background: var(--surface-alt);
+}
+
+/* Responsive handling */
+@media (max-width: 768px) {
+    data-grid {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    data-grid table {
+        min-width: 100%;
+    }
+}

@@ -1,0 +1,16 @@
+<table>
+    <thead>
+        <tr>
+            ${this.data.headers.map(header => `<th>${header}</th>`).join('')}
+        </tr>
+    </thead>
+    <tbody>
+        ${this.data.rows.map(row => `
+            <tr>
+                ${row.map((cell, index) => 
+                    `<td>${this.formatCell(cell, this.data.columns[index], index)}</td>`
+                ).join('')}
+            </tr>
+        `).join('')}
+    </tbody>
+</table>

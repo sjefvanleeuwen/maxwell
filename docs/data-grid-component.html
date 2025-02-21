@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Grid Component Documentation</title>
+    <link rel="stylesheet" href="../styles/components/data-grid.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>Data Grid Web Component</h1>
+    
+    <section>
+        <h2>Introduction</h2>
+        <p>The Data Grid component is a lightweight, customizable HTML table component that can display structured data in a tabular format. It's built using Web Components, making it framework-agnostic and easy to integrate into any web application.</p>
+    </section>
+
+    <section>
+        <h2>Features</h2>
+        <ul>
+            <li>Framework-independent</li>
+            <li>Simple data structure</li>
+            <li>Customizable styling</li>
+            <li>Supports dynamic data updates</li>
+            <li>Separated template structure</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Installation</h2>
+        <p>Import the component in your HTML file:</p>
+        <pre><code>&lt;script type="module" src="/components/data-grid/data-grid.js"&gt;&lt;/script&gt;</code></pre>
+    </section>
+
+    <section>
+        <h2>Basic Usage</h2>
+        <p>Add the component to your HTML:</p>
+        <pre><code>&lt;data-grid id="myGrid"&gt;&lt;/data-grid&gt;</code></pre>
+        
+        <p>Initialize with data:</p>
+        <pre><code>const grid = document.getElementById('myGrid');
+grid.setData({
+    headers: ['Name', 'Age', 'City'],
+    rows: [
+        ['John Doe', 30, 'New York'],
+        ['Jane Smith', 25, 'London']
+    ]
+});</code></pre>
+    </section>
+
+    <section class="example-section">
+        <h2>Live Example</h2>
+        <p>Here's a working example of the data grid:</p>
+        <data-grid id="exampleGrid"></data-grid>
+    </section>
+
+    <script type="module" src="../components/data-grid/data-grid.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const grid = document.getElementById('exampleGrid');
+            grid.setData({
+                headers: ['Product', 'Category', 'Price', 'Stock'],
+                rows: [
+                    ['Coffee Maker', 'Appliances', '$89.99', '45'],
+                    ['Gaming Mouse', 'Electronics', '$59.99', '156'],
+                    ['Desk Lamp', 'Home', '$24.99', '89'],
+                    ['Notebook', 'Office', '$4.99', '232']
+                ]
+            });
+        });
+    </script>
+
+    <section>
+        <h2>API Reference</h2>
+        <h3>Methods</h3>
+        <ul>
+            <li><code>setData(data)</code>: Updates the grid with new data</li>
+        </ul>
+
+        <h3>Data Structure</h3>
+        <pre><code>{
+    headers: string[],  // Array of column headers
+    rows: any[][]      // Array of row data
+}</code></pre>
+    </section>
+
+    <section>
+        <h2>Customization</h2>
+        <p>You can customize the appearance of the grid using CSS. The component uses standard table elements that can be styled using CSS selectors:</p>
+        <pre><code>data-grid table { /* styles */ }
+data-grid th { /* styles */ }
+data-grid td { /* styles */ }</code></pre>
+    </section>
+</body>
+</html>

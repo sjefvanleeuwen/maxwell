@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Building with GitHub Copilot - A Developer's Journey | Yocto CSS</title>
+    <link rel="stylesheet" href="../css/yocto.css">
+    <link rel="stylesheet" href="../css/components/card.css">
+    <link rel="stylesheet" href="../css/components/article.css">
+    <link rel="stylesheet" href="../css/components/data-grid.css">
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+    <script type="module" src="../components/navbar/navbar.js"></script>
+</head>
+<body>
+    <a href="#main-content" class="skip-nav">Skip to main content</a>
+    <top-navbar></top-navbar>
+
+    <header class="article-hero" style="background-image: url('images/4.png');"></header>
+
+    <main id="main-content">
+        <div class="container">
+            <article class="article-header card">
+                <h1>Understanding Data Grids with Web Components</h1>
+                <div class="article-meta">
+                    <span>By Maxwell Pierce</span> • 
+                    <span>8 min read</span> • 
+                    <span>Web Components</span>
+                </div>
+            </article>
+
+            <div class="article-content">
+                <section class="content-section">
+                    <h2>Introduction to Data Grids</h2>
+                    <p>Data grids are essential components for displaying tabular data in modern web applications. Our implementation using Web Components offers a framework-agnostic solution that's both lightweight and customizable.</p>
+                    
+                    <blockquote class="highlight-quote">
+                        Web Components allow us to create reusable custom elements that encapsulate functionality and work seamlessly across different frameworks.
+                    </blockquote>
+                </section>
+
+                <section class="content-section">
+                    <h2>Basic Implementation</h2>
+                    <p>Let's start with a simple employee database example:</p>
+                    <div class="demo-container card">
+                        <h3>Employee Database</h3>
+                        <data-grid id="employeeGrid"></data-grid>
+                    </div>
+
+                    <div class="code-block">
+                        <h3>Usage Example</h3>
+                        <pre><code class="language-javascript">
+const grid = document.getElementById('employeeGrid');
+grid.setData({
+    headers: ['Employee ID', 'Name', 'Department', 'Position', 'Hire Date'],
+    rows: [
+        ['EMP001', 'John Smith', 'Engineering', 'Senior Developer', '2020-01-15'],
+        // ... more employees
+    ]
+});</code></pre>
+                    </div>
+                </section>
+
+                <section class="content-section">
+                    <h2>Inventory Management Example</h2>
+                    <p>The same component can be used for different types of data. Here's a product inventory example:</p>
+                    <div class="demo-container card">
+                        <h3>Product Inventory</h3>
+                        <data-grid id="inventoryGrid"></data-grid>
+                    </div>
+                </section>
+
+                <section class="content-section">
+                    <h2>Key Features</h2>
+                    <div class="features-grid">
+                        <div class="feature-card card">
+                            <h3>🎨 Themeable</h3>
+                            <p>Supports both light and dark modes through CSS variables</p>
+                        </div>
+                        <div class="feature-card card">
+                            <h3>📱 Responsive</h3>
+                            <p>Adapts to different screen sizes with horizontal scrolling on mobile</p>
+                        </div>
+                        <div class="feature-card card">
+                            <h3>🔄 Dynamic</h3>
+                            <p>Updates instantly when data changes</p>
+                        </div>
+                        <div class="feature-card card">
+                            <h3>🎯 Framework-agnostic</h3>
+                            <p>Works with any JavaScript framework or vanilla JS</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="content-section">
+                    <h2>Implementation Details</h2>
+                    <div class="code-block">
+                        <h3>Component Structure</h3>
+                        <pre><code class="language-text">
+data-grid/
+├── data-grid.js     # Component logic
+├── template.html    # HTML structure
+└── data-grid.css    # Styling and themes</code></pre>
+                    </div>
+                </section>
+
+                <section class="content-section">
+                    <h2>Theme Integration</h2>
+                    <p>The data grid automatically adapts to your site's theme using CSS variables:</p>
+                    <div class="theme-demo">
+                        <button onclick="document.documentElement.setAttribute('data-theme', document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark')">
+                            Toggle Theme
+                        </button>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer class="content-section text-center">
+        <div class="container">
+            <p>Built with Yocto CSS Framework and GitHub Copilot</p>
+        </div>
+    </footer>
+
+    <script src="../js/navbar.js"></script>
+    <script src="../js/theme.js"></script>
+    <script>
+        mermaid.initialize({
+            theme: document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'default',
+            securityLevel: 'loose',
+            startOnLoad: true
+        });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-css.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+    <script type="module" src="../components/data-grid/data-grid.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Initialize employee grid
+            const employeeGrid = document.getElementById('employeeGrid');
+            employeeGrid.setData({
+                headers: ['Employee ID', 'Name', 'Department', 'Position', 'Hire Date'],
+                rows: [
+                    ['EMP001', 'John Smith', 'Engineering', 'Senior Developer', '2020-01-15'],
+                    ['EMP002', 'Sarah Johnson', 'Marketing', 'Manager', '2019-06-22'],
+                    ['EMP003', 'Michael Brown', 'Sales', 'Representative', '2021-03-10'],
+                    ['EMP004', 'Emily Davis', 'HR', 'Coordinator', '2022-08-01']
+                ]
+            });
+
+            // Initialize inventory grid
+            const inventoryGrid = document.getElementById('inventoryGrid');
+            inventoryGrid.setData({
+                headers: ['SKU', 'Product Name', 'Category', 'Price', 'Stock'],
+                rows: [
+                    ['PRD001', 'Laptop Pro X', 'Electronics', '$1299.99', '45'],
+                    ['PRD002', 'Wireless Mouse', 'Accessories', '$29.99', '156'],
+                    ['PRD003', 'USB-C Cable', 'Accessories', '$12.99', '278'],
+                    ['PRD004', 'Monitor 27"', 'Electronics', '$399.99', '32']
+                ]
+            });
+
+            // Product catalog example with images
+            const productGrid = document.getElementById('inventoryGrid');
+            productGrid.setData({
+                headers: ['Image', 'Product Name', 'Category', 'Price', 'Stock'],
+                columns: [
+                    { 
+                        type: 'image',
+                        width: '100px',
+                        height: '100px',
+                        alt: 'Product thumbnail'
+                    },
+                    { type: 'text' },
+                    { type: 'text' },
+                    { type: 'text' },
+                    { type: 'text' }
+                ],
+                rows: [
+                    ['images/products/laptop.png', 'Laptop Pro X', 'Electronics', '$1299.99', '45'],
+                    ['images/products/mouse.png', 'Wireless Mouse', 'Accessories', '$29.99', '156'],
+                    ['images/products/cable.png', 'USB-C Cable', 'Accessories', '$12.99', '278'],
+                    ['images/products/monitor.png', 'Monitor 27"', 'Electronics', '$399.99', '32']
+                ]
+            });
+        });
+    </script>
+
+    <style>
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .feature-card {
+            padding: 1.5rem;
+        }
+
+        .theme-demo {
+            margin: 2rem 0;
+            text-align: center;
+        }
+
+        .highlight-quote {
+            font-size: 1.2rem;
+            font-style: italic;
+            margin: 2rem 0;
+            padding: 1rem;
+            border-left: 4px solid var(--primary);
+            background: var(--surface-alt);
+        }
+
+        .demo-container {
+            padding: 1.5rem;
+            margin: 1rem 0;
+        }
+    </style>
+</body>
+</html>
