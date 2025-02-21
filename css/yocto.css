@@ -20,3 +20,12 @@
 /* Theme */
 @import 'theme/_dark.css';
 @import 'theme/_toggle.css';
+
+.container {
+    width: 95%;
+    max-width: var(--container-max-width);
+    margin-left: max(8px, auto);
+    margin-right: max(8px, auto);
+    padding-left: var(--container-padding);
+    padding-right: var(--container-padding);
+}
