@@ -27,6 +27,7 @@
     padding: 2rem 0;
     line-height: 1.8;
     font-size: 1.125rem;
+    max-width: 800px;
 }
 
 .article-section {
